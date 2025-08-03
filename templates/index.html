@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <h1 class="fade-in">{{ headline }}</h1>
+        <p class="fade-in delay-1">{{ subtext }}</p>
+        <p class="quote typewriter fade-in delay-2">{{ quote }}</p>
+        <ul class="features fade-in delay-3">
+            {% for feature in features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
